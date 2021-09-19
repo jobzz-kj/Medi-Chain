@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MEDI-CHAIN</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <!--animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+        label {color: #fff;}
+    </style>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--//end-animate-->
+    <link href='//fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <script src="js/responsiveslides.min.js"></script>
+</head>
+<script type="text/javascript">
+    function val()
+    {
+       
+        if(document.getElementById("product_id").value=="")
+        {
+            alert("please provide a valid product id");
+            document.getElementById("product_id").focus();
+            return false;
+        }
+       
+        if(document.getElementById("product_name").value=="")
+        {
+            alert("please provide your product name");
+            document.getElementById("product_name").focus();
+            return false;
+        }
+        
+
+        if(document.getElementById("ingredients").value=="")
+        {
+            alert("Please enter ingredients ");
+            document.getElementById("ingredients").focus();
+            return false;
+        }
+        if(document.getElementById("quantity").value=="")
+        {
+            alert("please enter the quantity ");
+            document.getElementById("quantity").focus();
+            return false;
+        }
+
+         if(document.getElementById("price").value=="")
+        {
+            alert("please enter the price");
+            document.getElementById("price").focus();
+            return false;
+        }
+        
+            alert("successfully added ");
+        
+    }
+</script>
+<body>
+
+<!-- header -->
+<div class="header_w3l">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a  href="index"> <img src="images/logo.png">Medi-Chain</a></h1>
+            </div>
+            <!-- top-nav -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {{!-- <li><a href="manufactor_home" class="active">Home</a></li> --}}
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<br>
+<!-- //banner-bottom -->
+<div class="banner_w3ls w3layouts">
+    <div>
+<br>
+        <h1 align="center"><font color="#f8f8ff"><b>Product Sales</b></font></h1>
+        <form action="/sell" method="post">
+
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="inputContainer">
+                    <label>Manufacture Id</label>
+                    <input type="text" name="product_id" id="product_id" value="" class="form-control" placeholder="Product Id:" required="required" /><br>
+                </div>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="inputContainer">
+                    <label>From Address</label>
+                    <input type="text" name="from_address" id="from_address" value="" class="form-control" placeholder="from_address:" required="required"  />
+                    <br>
+                </div>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="inputContainer">
+                    <label>To Address</label>
+                    <input type="text" name="to_address" id="to_address" value="" class="form-control" placeholder="to_address:" required="required"  />
+                    <br>
+                </div>
+            </div>
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="inputContainer">
+                    <label>Price</label>
+                    <input type="number" name="price" id="value" value="" class="form-control" placeholder="Price:" required="required"  />
+                    <br>
+
+                </div>
+            </div>     
+             {{!-- <div class="col-sm-4 col-sm-offset-4">
+               <div class="inputContainer">
+                    <label>Quantity</label>
+                    <input type="number" name="quantity" id="quantity" value="" class="form-control" placeholder="Quantity:" required="required"  />
+                    <br>
+
+                </div>
+                 
+            </div>
+
+             <div class="col-sm-4 col-sm-offset-4">
+                <div class="inputContainer">
+                    <label>Client Address</label>
+                    <textarea name="address" id="address" cols="21" rows="5" value="" class="form-control" placeholder="Address:" required="required"></textarea>
+                    <br>
+
+                </div>
+            </div> --}}
+
+            <div class="col-sm-2 col-sm-offset-5">
+                <button id="login" name="Pay_Amount" type="submit" class="btn-lg" style="font-size:20px;width: 90%" onclick="return val();">Pay Amount</button><br>
+            </div>
+        </form>
+        <br>
+        <br>
+    </div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+<div class="bottom_wthree">
+
+</div>
+</figure>
+<div class="clearfix"></div>
+</div>
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<!-- smooth scrolling -->
+</body>
+</html>
